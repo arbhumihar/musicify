@@ -1,0 +1,109 @@
+:root {
+    --bg: #111;
+    --text: #fff;
+    --card: #1e1e1e;
+    --highlight: #00f2ea;
+}
+
+.light {
+    --bg: #fff;
+    --text: #000;
+    --card: #e9e9e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: var(--card);
+    align-items: center;
+}
+
+.logo {
+    font-size: 40px;
+    color: var(--highlight);
+}
+
+#search {
+    padding: 7px 15px;
+    border-radius: 20px;
+    border: none;
+}
+
+.menu {
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#sidebar {
+    position: fixed;
+    right: -200px;
+    top: 0;
+    background: var(--card);
+    width: 180px;
+    height: 100vh;
+    padding-top: 60px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar a {
+    color: var(--text);
+    padding: 15px;
+    text-decoration: none;
+}
+
+.songs {
+    padding: 20px;
+}
+
+.song-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.song-card {
+    background: var(--card);
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.song-card:hover {
+    transform: scale(1.04);
+}
+
+.song-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.player-box {
+    padding: 20px;
+    background: var(--card);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#seek {
+    width: 100%;
+    margin-top: 10px;
+}

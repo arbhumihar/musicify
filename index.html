@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musicify - Online Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🎵 Musicify</div>
+
+        <input type="text" id="search" placeholder="Search songs...">
+
+        <button id="modeBtn">🌙</button>
+
+        <div class="menu" onclick="toggleMenu()">☰</div>
+
+        <nav id="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Trending</a>
+            <a href="#">Artists</a>
+            <a href="#">Playlists</a>
+        </nav>
+    </header>
+
+
+    <section class="songs">
+        <h2>Top Songs</h2>
+
+        <div class="song-list" id="songList">
+
+            <div class="song-card" data-title="Song title 1">
+    <img src="img1.png" alt="Tumhe Bhool Pana..">
+    <h3>Tumhe Bhool Pana</h3>
+
+    <button onclick="playSong('song1.mp3','Song title 1')">Play</button>
+    <button onclick="addToPlaylist('Tumhe Bhool Pana')">➕</button>
+</div>
+
+
+            <div class="song-card" data-title="Song Title 2">
+                <img src="img2.jpg" alt="">
+                <h3>Dard</h3>
+                <button onclick="playSong('song2.mp3','Song Title 2')">Play</button>
+                <button onclick="addToPlaylist('Dard')">➕</button>
+            </div>
+
+            <div class="song-card" data-title="Song Title 3">
+                <img src="img3.jpg" alt="choliya ke hook">
+                <h3>Choliya ke hook</h3>
+                <button onclick="playSong('song3.mp3','Song Title 3')">Play</button>
+                <button onclick="addToPlaylist('Choliya ke hook')">➕</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="player-box">
+        <h3 id="currentSong">Not Playing</h3>
+        <audio id="player" controls></audio>
+        <input type="range" id="seek" value="0">
+    </div>
+
+
+    <section class="playlist-section">
+        <h2>Your Playlist</h2>
+        <ul id="playlist"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

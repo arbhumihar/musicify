@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #search {
+        width: 90%;
+    }
+
+    .song-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .song-card {
+        width: 90%;
+    }
+}
